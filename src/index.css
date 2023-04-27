@@ -1,0 +1,263 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@tailwind base;
+@layer base {
+  h2 {
+    @apply font-extrabold text-base uppercase my-6 text-black-dark;
+  }
+  h3 {
+    @apply font-bold text-center text-sm my-3 text-black-dark;
+  }
+  h4 {
+    @apply font-bold text-center text-sm my-3 text-black-dark;
+  }
+  h5 {
+    @apply font-bold text-center text-sm my-3 text-black-dark;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+body {
+  //-webkit-touch-callout: none;
+  //-webkit-user-select: none;
+  //-moz-user-select: none;
+  //-ms-user-select: none;
+  //user-select: none;
+}
+body::-webkit-scrollbar {
+  display: block;
+}
+.sidebar::-webkit-scrollbar,
+.small-sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar.visible::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+  background-color: transparent;
+}
+.small-sidebar.visible-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+  background-color: transparent;
+}
+.sidebar.visible::-webkit-scrollbar-thumb,
+.small-sidebar.visible-scrollbar::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: theme("colors.black.dark");
+}
+
+/**
+.sidebar::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background-color: pink;
+}
+.sidebar::-webkit-scrollbar-track {
+  background-color: green;
+}
+*/
+
+.sidebar::-webkit-scrollbar-button,
+body::-webkit-scrollbar-button,
+.small-sidebar.visible-scrollbar::-webkit-scrollbar-button {
+  background-color: theme("colors.primary.DEFAULT");
+}
+
+.sidebar::-webkit-scrollbar-track-piece {
+  background-color: theme("colors.black.dark");
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+.header-bg {
+  background: radial-gradient(circle at 100% 100%, white 20%, #aaa 100%), url("images/backgrounds/header.webp");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+blockquote {
+  quotes: "\201e""\201d";
+}
+blockquote:before {
+  content: open-quote;
+}
+blockquote:after {
+  content: close-quote;
+}
+
+header.page-header {
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 80%;
+}
+
+.bg_spareparts,
+.bg_sparepart-details {
+  background: url("images/backgrounds/bg_spareparts.webp");
+}
+.bg_admin {
+}
+.bg_login {
+}
+
+@media screen and (min-width: 768px) {
+  header.page-header {
+    background-size: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header.page-header {
+    background-size: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header.page-header {
+    background-size: 35%;
+  }
+}
+.post p > img {
+  border: 1px solid theme("colors.accent.dark");
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: theme("colors.accent.DEFAULT");
+  border-radius: 0.3rem;
+}
+#masonryGallery {
+  background: #ebeff4;
+}
+#footer {
+  background-image: url("images/backgrounds/bg_footer.webp");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto;
+  background-blend-mode: darken;
+}
+@media screen and (max-width: 1024px) {
+  #footer {
+    background-size: cover;
+    background-position: center right;
+  }
+}
+#contactForm {
+  background-image: url("images/backgrounds/bg_contact1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+#user-email,
+#user-password {
+  border: 2px solid theme("colors.accent.DEFAULT");
+}
+#user-email:focus,
+#user-password:focus {
+  border: 2px solid theme("colors.accent.dark");
+}
+.bg_mop {
+  background: radial-gradient(ellipse 50% 100%, white 0%, black 100%), url("images/homepage/bg_mop.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+@media screen and (min-width: 640px) {
+  #mop,
+  #hospitality,
+  #vendLaundry,
+  #softWash,
+  #hygieneBarrier {
+    grid-template-areas: "a1 a2";
+  }
+
+  #mop .bg,
+  #vendLaundry .bg,
+  #softWash .bg,
+  #hygieneBarrier .bg,
+  #hospitality .bg {
+    grid-area: a2;
+  }
+}
+
+#softwash_silk {
+    grid-template-areas:
+      "a1"
+      "a2"
+  }
+  #softwash_silk > p {
+    grid-area: a2;
+  }
+  #softwash_silk > div {
+    grid-area: a1;
+  }
+
+@media screen and (min-width: 1024px) {
+  #softwash_silk {
+    grid-template-areas:
+      "a1 a2"
+  }
+  #softwash_silk > p {
+    grid-area: a1;
+  }
+  #softwash_silk > div {
+    grid-area: a2;
+  }
+}
+.bg_hospitality {
+  background: radial-gradient(ellipse 50% 100%, white 0%, black 100%), url("images/homepage/bg_hospitality.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg_nursery {
+  background: radial-gradient(ellipse 50% 100%, white 0%, black 100%), url("images/homepage/bg_nursery.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg_civilservices {
+  background: radial-gradient(ellipse 50% 100%, white 0%, black 100%), url("images/homepage/bg_civilservices.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg_softwash {
+  background: radial-gradient(ellipse 50% 100%, white 0%, black 100%), url("images/homepage/bg_softwash.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg_hygieneBarrier {
+  background: radial-gradient(ellipse 50% 100%, white 0%, black 100%), url("images/homepage/bg_hygieneBarrier.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg_save_water_energy {
+  background: radial-gradient(ellipse 50% 100%, white 0%, black 100%), url("images/homepage/bg_save_water_energy.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg_additionalEquipment {
+  background: url("images/homepage/bg_additionalEquipment.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-blend-mode: overlay;
+}
+.bg_vendLaundry {
+  background: url("images/homepage/bg_vendLaundry.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}

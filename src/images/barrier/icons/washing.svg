@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg28"
+   width="52.914062"
+   height="52.91333"
+   viewBox="0 0 52.914062 52.913329"
+   sodipodi:docname="DL_AP22-1062_Brochure_HealthcareExperts_en-EU.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs32">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2860">
+      <path
+         d="m 56.693,373.89 h 39.686 v 39.685 H 56.693 Z"
+         id="path2858" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview30"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <g
+     id="g2602"
+     inkscape:groupmode="layer"
+     inkscape:label="Page 8"
+     transform="matrix(1.3333333,0,0,-1.3333333,-65.378369,688.22141)"
+     style="display:inline">
+    <g
+       id="g2854"
+       transform="translate(100.43722,105.42701)"
+       inkscape:export-filename="barrier/wshing.webp"
+       inkscape:export-xdpi="97.54818"
+       inkscape:export-ydpi="97.54818">
+      <g
+         id="g104124"
+         transform="translate(-105.56586,-2.7415105)">
+        <g
+           id="g2856"
+           clip-path="url(#clipPath2860)"
+           transform="translate(-2.5305116,-0.09443308)">
+          <path
+             d="m 76.5354,411.102 c -9.578,0 -17.37,-7.792 -17.37,-17.369 0,-9.578 7.792,-17.37 17.37,-17.37 9.578,0 17.37,7.792 17.37,17.37 0,9.577 -7.792,17.369 -17.37,17.369 m 0,-37.212 c -10.941,0 -19.843,8.901 -19.843,19.843 0,10.941 8.902,19.842 19.843,19.842 10.941,0 19.843,-8.901 19.843,-19.842 0,-10.942 -8.902,-19.843 -19.843,-19.843"
+             style="fill:#22d3ee;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+             id="path2864" />
+          <path
+             d="m 67.4972,396.0101 c 2.187,0 2.187,-2.8 4.375,-2.8 2.187,0 2.187,2.8 4.374,2.8 2.188,0 2.188,-2.8 4.376,-2.8 2.187,0 2.187,2.8 4.375,2.8"
+             style="fill:none;stroke:#22d3ee;stroke-width:0.869;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path2868" />
+          <path
+             d="m 85.5885,398.0912 -1.711,-8.399 c 0,-0.696 -0.565,-1.261 -1.261,-1.261 h -12.879 c -0.696,0 -1.26,0.565 -1.26,1.261 l -1.712,8.399"
+             style="fill:none;stroke:#22d3ee;stroke-width:0.869;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path2872" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

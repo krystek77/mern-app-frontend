@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/png"
+      href="./logo_pralma48.png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/png"
+      href="./logo_pralma48.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      PPUP Pralma Kielce - dogoń przyszłość przemysłowej pralni wodnej OFFLINE
+    </title>
+    <style>
+      #offline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid #991b1b;
+        max-width: 320px;
+        background-color: #ef4444;
+        box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+      }
+      #header {
+        margin: 0;
+        text-transform: uppercase;
+        color: #991b1b;
+        text-align: center;
+      }
+      #header strong {
+        font-size: 2rem;
+      }
+      #description {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+        text-transform: lowercase;
+        color: white;
+        line-height: 1;
+        max-width: 280px;
+      }
+      #description strong {
+        color: #22d3ee;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 0.5rem 0;
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="">
+    <dialog id="offline">
+      <h1 id="header">Jesteś <strong>OFFLINE</strong></h1>
+      <p id="description">
+        Aby zobaczyć tą zawartość musisz być w trybie <strong>online</strong>
+      </p>
+    </dialog>
+    <script>
+      const dialog = document.getElementById('offline');
+      dialog.showModal();
+    </script>
+  </body>
+</html>
