@@ -1,4 +1,5 @@
-const URL = 'http://localhost:4000/pricelist';
+import {server} from '../config/config'
+const URL = `${server}/pricelist`;
 
 export const getPriceListsByCategoryId = async (categoryId) => {
   try {

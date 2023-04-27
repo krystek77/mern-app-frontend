@@ -1,5 +1,6 @@
 import { userAPI } from "../utils";
-const URL = "http://localhost:4000/additional-equipment";
+import {server} from '../config/config'
+const URL = `${server}/additional-equipment`;
 
 // GET http://localhost:4000/additional-equipment HTTP/1.1
 export const getAdditionalEquipments = async () => {

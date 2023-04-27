@@ -1,5 +1,6 @@
 import { userAPI } from '../utils';
-const URL = 'http://localhost:4000/supplier';
+import {server} from '../config/config'
+const URL = `${server}/supplier`;
 
 export const createSupplier = async (data) => {
   const token = userAPI.getToken();

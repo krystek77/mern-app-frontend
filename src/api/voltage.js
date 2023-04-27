@@ -1,5 +1,6 @@
 import { userAPI } from '../utils';
-const URL = 'http://localhost:4000/voltage';
+import {server} from '../config/config'
+const URL = `${server}/voltage`;
 
 export const getVoltagesByCategoryIds = async (data) => {
   const token = userAPI.getToken();

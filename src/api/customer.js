@@ -1,4 +1,5 @@
-const URL = "http://localhost:4000/customer";
+import {server} from '../config/config'
+const URL = `${server}/customer`;
 
 export const getCustomers = async () => {
   try {

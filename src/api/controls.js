@@ -1,5 +1,6 @@
 import { userAPI } from '../utils';
-const URL = 'http://localhost:4000/control';
+import { server} from '../config/config'
+const URL = `${server}/control`;
 
 export const getControls = async () => {
   try {

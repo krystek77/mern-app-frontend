@@ -1,4 +1,5 @@
-const URL = 'http://localhost:4000/laundryPhoto';
+import {server} from '../config/config'
+const URL = `${server}/laundryPhoto`;
 
 export const getLaundryPhotos = async (page, onpage) => {
   try {

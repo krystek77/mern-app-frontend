@@ -1,4 +1,5 @@
-const URL = "http://localhost:4000/document";
+import {server} from '../config/config'
+const URL = `${server}/document`;
 export const getDocuments = async () => {
   try {
     const response = await fetch(URL);

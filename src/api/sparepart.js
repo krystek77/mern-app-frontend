@@ -1,5 +1,6 @@
 import { userAPI } from "../utils";
-const URL = "http://localhost:4000/sparepart";
+import {server} from '../config/config'
+const URL = `${server}/sparepart`;
 
 export const getAllSpareParts = async () => {
   try {

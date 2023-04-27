@@ -1,5 +1,6 @@
 import { userAPI } from "../utils";
-const URL = "http://localhost:4000/product";
+import {server} from '../config/config'
+const URL = `${server}/product`;
 
 export const getProductsByCategoryId = async (categoryId) => {
   try {

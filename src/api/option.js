@@ -1,5 +1,6 @@
 import { userAPI } from '../utils';
-const URL = 'http://localhost:4000/option';
+import {server} from '../config/config'
+const URL = `${server}/option`;
 
 export const getOptionsByCategoryIds = async (data) => {
   const token = userAPI.getToken();

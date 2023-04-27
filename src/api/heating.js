@@ -1,5 +1,6 @@
 import { userAPI } from '../utils';
-const URL = 'http://localhost:4000/heating';
+import {server} from '../config/config'
+const URL = `${server}/heating`;
 
 export const getHeatingsByCategoryIds = async (data) => {
   const token = userAPI.getToken();

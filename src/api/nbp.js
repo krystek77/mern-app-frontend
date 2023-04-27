@@ -1,4 +1,5 @@
-const URL = 'http://localhost:4000/kurs';
+import {server} from '../config/config'
+const URL = `${server}/kurs`;
 
 export const getAvarageExchangeRate = async () => {
   try {

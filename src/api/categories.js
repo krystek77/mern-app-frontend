@@ -1,6 +1,7 @@
 import { userAPI } from '../utils';
+import {server} from '../config/config'
 
-const URL = 'http://localhost:4000/category';
+const URL = `${server}/category`;
 
 export const getCategories = async (query) => {
   let result = [];

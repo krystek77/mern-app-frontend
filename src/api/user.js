@@ -1,4 +1,5 @@
-const URL = 'http://localhost:4000/user';
+import {server} from '../config/config'
+const URL = `${server}/user`;
 
 export const signinUser = async (data) => {
   try {

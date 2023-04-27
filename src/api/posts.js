@@ -1,4 +1,5 @@
-const URL = 'http://localhost:4000/post';
+import {server} from '../config/config'
+const URL = `${server}/post`;
 
 export const getPosts = async () => {
   try {

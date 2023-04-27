@@ -1,4 +1,5 @@
-const URL = "http://localhost:4000/tag";
+import {server} from '../config/config'
+const URL = `${server}/tag`;
 
 export const getTags = async () => {
   try {
