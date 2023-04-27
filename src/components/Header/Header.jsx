@@ -4,10 +4,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { useNavigation } from 'react-router-dom';
 import { fisherYatesShuffle as shuffleArray } from '../../utils';
 import QuickContact from '../QuickContact';
-import BG_1 from '../../images/bg_header/bg_urzadzenia_pralnicze_1.webp';
-import BG_4 from '../../images/bg_header/bg_urzadzenia_pralnicze_search_4.webp';
-import BG_3 from '../../images/bg_header/bg_urzadzenia_pralnicze_3.webp';
-import BG_7 from '../../images/bg_header/bg_urzadzenia_pralnicze_search_7.webp';
 
 const MIX_BLEND_MODE = [
   'mix-blend-color',
@@ -187,14 +183,14 @@ Header.defaultProps = {
   title: 'Przemysłowe urządzenia pralnicze',
   children: null,
   images: [
-    { id: uuidv4(), src: BG_4, position: 'object-center' },
+    { id: uuidv4(), src: '', position: 'object-center' },
     { id: uuidv4(), src: '', position: '' },
     { id: uuidv4(), src: '', position: '' },
-    { id: uuidv4(), src: BG_1, position: 'object-center' },
+    { id: uuidv4(), src: '', position: 'object-center' },
     { id: uuidv4(), src: '', position: '' },
     { id: uuidv4(), src: '', position: '' },
-    { id: uuidv4(), src: BG_3, position: 'object-center' },
-    { id: uuidv4(), src: BG_7, position: 'object-bottom' },
+    { id: uuidv4(), src: '', position: 'object-center' },
+    { id: uuidv4(), src: '', position: 'object-bottom' },
   ],
   boxes: [
     [
