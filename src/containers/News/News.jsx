@@ -17,12 +17,14 @@ import { useScrollIntoView } from "../../hooks";
 import ContactForm from "../../components/ContactForm";
 import ContactsData from "../../components/ContactsData/ContactsData";
 import CompanyData from "../../components/CompanyData";
+import {userAPI} from '../../utils'
 
 moment.locale("pl");
 
 export async function loader() {
   const mdPosts = await api.getMarkdownPosts();
-  return { mdPosts };
+  const user = userAPI.checkAdmin();
+  return { mdPosts,user };
 }
 
 export async function action({ params }) {
@@ -51,7 +53,7 @@ const bgImages = [
 ];
 
 export default function News() {
-  const { mdPosts } = useLoaderData();
+  const { mdPosts,user } = useLoaderData();
   const { ref } = useScrollIntoView();
 
   return (
@@ -105,7 +107,7 @@ export default function News() {
                         <Button label="czytaj" />
                       </div>
                     </NavLink>
-                    {admin ? (
+                    {user ? (
                       <div className="absolute top-0 right-0 p-2 bg-admin-light rounded-tr rounded-bl shadow-lg">
                         <FormButton
                           btnClasses="ml-0"
