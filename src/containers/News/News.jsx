@@ -65,7 +65,7 @@ export default function News() {
         <PageTitle text="Z ostatniej chwili" />
         <div className="grid xl:grid-cols-1-300 xl:gap-x-6">
           {mdPosts.length ? (
-            <div className="posts-card grid grid-cols-1 auto-rows-max gap-x-2 gap-y-6 md:gap-x-4 md:gap-y-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-8 ">
+            <div className="posts-card grid grid-cols-1 auto-rows-max gap-x-2 gap-y-6 md:gap-x-4 md:gap-y-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-6 xl:gap-y-8 ">
               {mdPosts.map((post) => {
                 return (
                   <div
