@@ -46,6 +46,7 @@ import PageTitle from '../components/PageTitle/PageTitle';
 import ContactForm from '../components/ContactForm';
 import CompanyData from '../components/CompanyData';
 import ContactsData from '../components/ContactsData/ContactsData';
+import {server} from '../config/config'
 
 export async function loader({ params, request }) {
   const { model, categoryName } = params;
@@ -362,7 +363,7 @@ export default function ProductDetails() {
                     key={document._id}
                     target="_blank"
                     rel="noreferrer"
-                    href={`http://localhost:4000/assets/documents/${document.filename}`}
+                    href={`${server}/assets/documents/${document.filename}`}
                   >
                     {fileTypeIcon(getExtensionFile(document.filename))}
                     <span>{document.displayFileName}</span>

@@ -29,6 +29,7 @@ import {
 } from '../utils';
 import RequiredIndicator from '../components/Required';
 import PageHeader from '../components/PageHeader/PageHeader';
+import {server} from '../config/config'
 
 export async function loader({ params }) {
   const { laundryPhotoId } = params;
@@ -243,7 +244,7 @@ export default function LaundryForm() {
                       src={
                         image
                           ? URL.createObjectURL(image[0])
-                          : `http://localhost:4000/${downloadImage.path.replace(
+                          : `${server}/${downloadImage.path.replace(
                               'public',
                               ''
                             )}`

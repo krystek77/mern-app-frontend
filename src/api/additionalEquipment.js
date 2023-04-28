@@ -2,7 +2,6 @@ import { userAPI } from "../utils";
 import {server} from '../config/config'
 const URL = `${server}/additional-equipment`;
 
-// GET http://localhost:4000/additional-equipment HTTP/1.1
 export const getAdditionalEquipments = async () => {
   try {
     const response = await fetch(URL, {
@@ -15,7 +14,6 @@ export const getAdditionalEquipments = async () => {
   }
 };
 
-// GET http://localhost:4000/additional-equipment/${slug} HTTP/1.1
 export const getAdditionalEquipment = async (slug) => {
   const token = userAPI.getToken();
   try {
@@ -30,7 +28,6 @@ export const getAdditionalEquipment = async (slug) => {
   }
 };
 
-// POST http://localhost:4000/additional-equipment HTTP/1.1
 export const createAdditionalEquipment = async (data) => {
   const token = userAPI.getToken();
   try {
@@ -49,7 +46,6 @@ export const createAdditionalEquipment = async (data) => {
   }
 };
 
-// PATCH http://localhost:4000/additional-equipment/${slug} HTTP/1.1
 export const updateAdditionalEquipment = async (data, slug) => {
   const token = userAPI.getToken();
   try {
@@ -68,7 +64,6 @@ export const updateAdditionalEquipment = async (data, slug) => {
   }
 };
 
-// DELETE http://localhost:4000/additional-equipment/${slug} HTTP/1.1
 export const deleteAdditionalEquipment = async (slug) => {
   const token = userAPI.getToken();
   try {

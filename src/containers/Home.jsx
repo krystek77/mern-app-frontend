@@ -28,14 +28,16 @@ import Logo from '../images/logo.webp';
 import * as api from '../api/laundryPhoto';
 import { getMarkdownPosts } from '../api/posts';
 import NoItems from '../components/NoItems/NoItems';
+import {userAPI} from '../utils';
 
 export async function loader({ request }) {
+  const user = userAPI.checkAdmin();
   const url = new URL(request.url);
   let page = url.searchParams.get('page');
   let onpage = url.searchParams.get('onpage');
   if (!page) page = '1';
   if (!onpage) onpage = '12';
-  const data = { shuffleLaundryPhotos: [], count: '', posts: [], onpage, page };
+  const data = {user:user, shuffleLaundryPhotos: [], count: '', posts: [], onpage, page };
   try {
     const { images: laundryPhotos, count } = await api.getLaundryPhotos(
       page,
@@ -93,15 +95,14 @@ export default function Home() {
   const vendLaundry = useRef(null);
   const hospitality = useRef(null)
   const { ref: reference } = useScrollIntoView();
-  const { shuffleLaundryPhotos, count, onpage, page, posts } = useLoaderData();
+  const { shuffleLaundryPhotos, count, onpage, page, posts,user } = useLoaderData();
 
   return (
     <div ref={reference} className=''>
       <header id='header' ref={header} className='relative overflow-hidden min-h-screen'>
         <div className='header-bg bg-slate-50 absolute inset-y-0 inset-x-0'></div>
         <div className='px-8 landscape:px-16 py-12 flex flex-col justify-center min-h-screen overflow-hidden '>
-          {/** Cumulative layout shift without that is 0 */}
-          <h2 className='text-4xl uppercase font-medium'>
+          <h2 className='text-3xl sm:text-4xl uppercase font-medium'>
             <div className='relative animate-producent text-primary'>Producent przemysłowych</div>
             <div className='relative animate-przemyslowych'>urządzeń pralniczych</div>
           </h2>
@@ -693,7 +694,7 @@ export default function Home() {
       </section>
       {/** masonry gallery */}
       <section id='masonryGallery' ref={masonryGallery} className='mt-8 px-2 pb-12 pt-2 relative overflow-hidden'>
-        <MasonryGallery items={shuffleLaundryPhotos} count={count} onpage={onpage} page={page} />
+        <MasonryGallery items={shuffleLaundryPhotos} user={user} count={count} onpage={onpage} page={page} />
       </section>
       {/** contact form */}
       <section id='contactForm' ref={contactForm} className='bg-slate-200 pt-4'>

@@ -14,6 +14,7 @@ import { fileTypeIcon, getExtensionFile } from "../utils";
 import * as api from "../api/posts";
 import PageHeader from "../components/PageHeader/PageHeader";
 import Footer from "./Footer/Footer";
+import { server } from "../config/config";
 
 export async function loader() {
   try {
@@ -89,7 +90,7 @@ export default function PostForm() {
                 <div className='flex items-center justify-start'>
                   {fileTypeIcon(getExtensionFile(post.originalname))}
                   <span className='text-sm text-slate-500'>
-                    <a href={`http://localhost:4000${post.path.split("public")[1]}`} download>
+                    <a href={`${server}/${post.path.split("public")[1]}`} download>
                       {post.originalname}
                     </a>
                   </span>
@@ -98,7 +99,7 @@ export default function PostForm() {
                   <span className='text-sm text-slate-500 w-20'>{`${Math.ceil(post.size / 1000)} kB`}</span>
                   <div className='flex items-center justify-end ml-4'>
                     <a
-                      href={`http://localhost:4000${post.path.split("public")[1]}`}
+                      href={`${server}/${post.path.split("public")[1]}`}
                       download
                       className='w-6 h-6 ml-1 flex items-center justify-center border border-slate-800 rounded text-xs hover:shadow-lg hover:bg-accent hover:border-accent-dark'
                       title='Ściągnij artykuł'

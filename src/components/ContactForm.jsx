@@ -107,7 +107,7 @@ export default function ContactForm() {
             <div className="relative">
               <Listbox.Button className="relative w-full min-h-[40px] cursor-default rounded-md bg-slate-100 py-2 pl-3 pr-10 text-left shadow-md">
                 <span className="flex justify-between items-center">
-                  <span className="truncate">{selectedMarket}</span>
+                  <span className="">{selectedMarket}</span>
                 </span>
                 <span className="absolute right-0 inset-y-0 flex items-center bg-accent border border-accent-dark rounded-tr-md rounded-br-md h-full">
                   <ChevronUpDownIcon className="h-5 w-5" aria-hidden="true" />
@@ -177,7 +177,7 @@ export default function ContactForm() {
             <div className="relative">
               <Listbox.Button className="relative w-full min-h-[40px] cursor-default rounded-md bg-slate-100 py-2 pl-3 pr-10 text-left shadow-md">
                 <span className="flex justify-between items-center">
-                  <span className="truncate">{selectedReason.name}</span>
+                  <span className="">{selectedReason.name}</span>
                 </span>
                 <span className="absolute right-0 inset-y-0 flex items-center bg-accent border border-accent-dark rounded-tr-md rounded-br-md h-full">
                   <ChevronUpDownIcon className="h-5 w-5" aria-hidden="true" />

@@ -26,6 +26,7 @@ import * as api from '../api/document';
 import { fileTypeIcon, getExtensionFile, isValidDocument } from '../utils';
 import Footer from './Footer/Footer';
 import PageHeader from '../components/PageHeader/PageHeader';
+import {server} from '../config/config'
 
 export async function loader() {
   try {
@@ -178,7 +179,7 @@ export default function DocumentForm() {
                   {fileTypeIcon(getExtensionFile(document.originalname))}
                   <span className="text-sm text-slate-500">
                     <a
-                      href={`http://localhost:4000/${
+                      href={`${server}/${
                         document.path.split('public')[1]
                       }`}
                     >
@@ -257,7 +258,7 @@ export default function DocumentForm() {
                       <PencilSquareIcon className="w-4 h-4 self-center justify-self-center" />
                     </button>
                     <a
-                      href={`http://localhost:4000/${
+                      href={`${server}/${
                         document.path.split('public')[1]
                       }`}
                       target="_blank"
