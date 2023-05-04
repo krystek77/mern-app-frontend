@@ -19,7 +19,7 @@ export default function FormLinks({
   
   return (
     <div className=' max-w-4xl px-8 border py-8 bg-white rounded  '>
-      <div className='grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-5 auto-rows-max'>
+      <div className='grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 auto-rows-max'>
         {/** product */}
         <div className='flex flex-col justify-start items-start border border-accent-dark bg-accent px-2 rounded overflow-hidden '>
           {/** kategoria */}

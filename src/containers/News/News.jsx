@@ -39,8 +39,6 @@ export async function action({ params }) {
   }
 }
 
-const admin = true;
-
 const bgImages = [
   { id: uuidv4(), src: "", position: "object-center" },
   { id: uuidv4(), src: "", position: "object-center" },
