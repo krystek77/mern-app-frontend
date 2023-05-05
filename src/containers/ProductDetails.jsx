@@ -49,6 +49,7 @@ import ContactsData from '../components/ContactsData/ContactsData';
 import {server} from '../config/config'
 
 export async function loader({ params, request }) {
+  console.log(params.model,params.categoryName);
   const { model, categoryName } = params;
   const user = userAPI.checkAdmin();
   const url = new URL(request.url);
