@@ -30,6 +30,7 @@ import { v4 as uuidV4 } from "uuid";
 import ContactForm from "../components/ContactForm";
 import CompanyData from "../components/CompanyData";
 import ContactsData from "../components/ContactsData/ContactsData";
+import {increase} from '../api/mostPopular'
 
 const tipItems = [
   {
@@ -55,8 +56,10 @@ const tipItems = [
 ];
 
 export async function loader({ params, request }) {
+  
   const { categoryName } = params;
   const url = new URL(request.url);
+  
   const queryTitle = url.searchParams.get("title");
   const user = userAPI.checkAdmin();
   const data = {
@@ -70,7 +73,14 @@ export async function loader({ params, request }) {
     queryTitle: queryTitle,
   };
 
+  const COIN = "wyposazenie-pralni-przemyslowej-samoobslugowe";
+  const isCoin = url.pathname.split("/")[1] === COIN ? true : false
+
   try {
+   
+    /** most popular api */
+    await increase(categoryName,isCoin);
+
     const responseProducts = await api.getProductsByCategoryName(categoryName);
     if (responseProducts.message) {
       data.message = responseProducts.message;

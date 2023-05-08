@@ -29,6 +29,8 @@ import * as api from '../api/laundryPhoto';
 import { getMarkdownPosts } from '../api/posts';
 import NoItems from '../components/NoItems/NoItems';
 import {userAPI} from '../utils';
+import {getLastWatched} from '../api/watched';
+import LastWatched from '../components/LastWatched';
 
 export async function loader({ request }) {
   const user = userAPI.checkAdmin();
@@ -37,8 +39,11 @@ export async function loader({ request }) {
   let onpage = url.searchParams.get('onpage');
   if (!page) page = '1';
   if (!onpage) onpage = '12';
-  const data = {user:user, shuffleLaundryPhotos: [], count: '', posts: [], onpage, page };
+  const data = {user:user, shuffleLaundryPhotos: [], count: '', posts: [],lastWatched:[], onpage, page };
   try {
+    const lastWatched = await getLastWatched();
+    data.lastWatched = lastWatched;
+   
     const { images: laundryPhotos, count } = await api.getLaundryPhotos(
       page,
       onpage
@@ -95,7 +100,8 @@ export default function Home() {
   const vendLaundry = useRef(null);
   const hospitality = useRef(null)
   const { ref: reference } = useScrollIntoView();
-  const { shuffleLaundryPhotos, count, onpage, page, posts,user } = useLoaderData();
+  const { shuffleLaundryPhotos, count, onpage, page, posts,user,lastWatched } = useLoaderData();
+ 
 
   return (
     <div ref={reference} className=''>
@@ -516,6 +522,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+      {/** last 6 watched products */}
+      <LastWatched items={lastWatched}/>
       {/** hospitality */}
       <section id='hospitality' ref={hospitality} className='grid sm:grid-cols-2 auto-rows-max'>
         <div className='bg bg_hospitality min-h-[320px] self-stretch'></div>

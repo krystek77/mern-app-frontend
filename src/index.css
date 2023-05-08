@@ -17,6 +17,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-me {
+    -webkit-clip-path: circle(64.0% at 100% 45%);
+    clip-path: circle(64.0% at 100% 42%);
+  }
+  .clip-hover {
+    -webkit-clip-path: circle(120% at 100% 45%);
+    clip-path: circle(120% at 100% 42%);
+  }
+}
+
 body {
   //-webkit-touch-callout: none;
   //-webkit-user-select: none;
@@ -182,21 +193,20 @@ header.page-header {
 }
 
 #softwash_silk {
-    grid-template-areas:
-      "a1"
-      "a2"
-  }
-  #softwash_silk > p {
-    grid-area: a2;
-  }
-  #softwash_silk > div {
-    grid-area: a1;
-  }
+  grid-template-areas:
+    "a1"
+    "a2";
+}
+#softwash_silk > p {
+  grid-area: a2;
+}
+#softwash_silk > div {
+  grid-area: a1;
+}
 
 @media screen and (min-width: 1024px) {
   #softwash_silk {
-    grid-template-areas:
-      "a1 a2"
+    grid-template-areas: "a1 a2";
   }
   #softwash_silk > p {
     grid-area: a1;
