@@ -9,7 +9,7 @@ export default function LastWatched({ items }) {
     <div className='relative pt-6 pb-12 group'>
       <div className='absolute inset-x-0 inset-y-0 bg-accent-light bg-opacity-30 clip-me group-hover:clip-hover transition-all duration-300 ease-in-out'></div>
       <section className='px-4'>
-        <PageTitle text='Ostatnio oglądane wyposażenie pralni przemysłowej' />
+        <h2 class="text-accent-dark uppercase font-light text-2xl text-center max-w-2xl mx-auto">Ostatnio oglądane wyposażenie <strong className="text-black-dark">pralni przemysłowej</strong></h2>
         <div className='flex flex-wrap'>
           {items[0].models.map((item) => {
             return (
