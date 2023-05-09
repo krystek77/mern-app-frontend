@@ -2,7 +2,6 @@ import { server } from "../config/config";
 const URL = `${server}/mostPopular`;
 
 export const increase = async (categoryName, isCoin) => {
-  console.log("INCREASE");
   try {
     const response = await fetch(URL, {
       method: "POST",
@@ -16,7 +15,6 @@ export const increase = async (categoryName, isCoin) => {
   }
 };
 export const getMostPopular = async () => {
-  console.log("GET MOST POPULAR");
   try {
     const response = await fetch(URL, {
       method: "GET",

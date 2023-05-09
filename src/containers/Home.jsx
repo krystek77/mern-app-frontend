@@ -31,6 +31,8 @@ import NoItems from '../components/NoItems/NoItems';
 import {userAPI} from '../utils';
 import {getLastWatched} from '../api/watched';
 import LastWatched from '../components/LastWatched';
+import MostPopular from '../components/MostPopular';
+import {getMostPopular} from '../api/mostPopular';
 
 export async function loader({ request }) {
   const user = userAPI.checkAdmin();
@@ -39,10 +41,9 @@ export async function loader({ request }) {
   let onpage = url.searchParams.get('onpage');
   if (!page) page = '1';
   if (!onpage) onpage = '12';
-  const data = {user:user, shuffleLaundryPhotos: [], count: '', posts: [],lastWatched:[], onpage, page };
+  const data = {user:user, shuffleLaundryPhotos: [], count: '', posts: [],lastWatched:[],mostPopular:[], onpage, page };
   try {
-    const lastWatched = await getLastWatched();
-    data.lastWatched = lastWatched;
+ 
    
     const { images: laundryPhotos, count } = await api.getLaundryPhotos(
       page,
@@ -55,6 +56,10 @@ export async function loader({ request }) {
     data.posts = posts.slice(0, 5).sort((postA, postB) => {
       return new Date(postA.date).getTime() < new Date(postB.date).getTime();
     });
+    const lastWatched = await getLastWatched();
+    if(!lastWatched.message) data.lastWatched = lastWatched;
+    const responseGetMostPopular = await getMostPopular();
+    if(!responseGetMostPopular.message) data.mostPopular = responseGetMostPopular;
     return data;
   } catch (error) {
     console.log(error.message);
@@ -100,7 +105,7 @@ export default function Home() {
   const vendLaundry = useRef(null);
   const hospitality = useRef(null)
   const { ref: reference } = useScrollIntoView();
-  const { shuffleLaundryPhotos, count, onpage, page, posts,user,lastWatched } = useLoaderData();
+  const { shuffleLaundryPhotos, count, onpage, page, posts,user,lastWatched,mostPopular } = useLoaderData();
  
 
   return (
@@ -700,8 +705,10 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      {/** most popular categories */}
+      <MostPopular items={mostPopular}/>
       {/** masonry gallery */}
-      <section id='masonryGallery' ref={masonryGallery} className='mt-8 px-2 pb-12 pt-2 relative overflow-hidden'>
+      <section id='masonryGallery' ref={masonryGallery} className='px-2 pb-12 pt-2 relative overflow-hidden'>
         <MasonryGallery items={shuffleLaundryPhotos} user={user} count={count} onpage={onpage} page={page} />
       </section>
       {/** contact form */}
