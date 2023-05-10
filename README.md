@@ -1,4 +1,4 @@
-# MERN web application
+# Full stack MERN web application
 
 ## Home page
 ![Zrzut ekranu (35)](https://github.com/krystek77/mern-app-frontend/assets/45161412/26f4929b-6f09-4685-b3aa-687eecf86bd2)
