@@ -2,7 +2,7 @@
 
 The company's website presenting its offer. Products sorted by category. Displaying products of a given category, product details, photo gallery, latest news, general information pages, contact form, newsletter. The site has a content management system (CMS) that allows you to add, delete, edit, update products, spare parts, product price lists, posts, etc.
 
-The content of the page can only be managed by the user who is the administrator (employee of the company)
+The content of the page can only be managed by the user who is the administrator (employee of the company). Prepared for Progressive Web Application
 
 ## Main technologies
 1. database - MongoDB
