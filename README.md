@@ -16,22 +16,24 @@ Displaying recently viewed products and the most popular product categories on t
 7. newsletter, contact form - sendgrid
 
 ### Home page
-![Zrzut ekranu (35)](https://github.com/krystek77/mern-app-frontend/assets/45161412/26f4929b-6f09-4685-b3aa-687eecf86bd2)
+![Zrzut ekranu (35)](https://github.com/krystek77/mern-app-frontend/assets/45161412/0caa9636-96d0-4f89-a7c7-7660a8f270f0)
 
 ### Some other page
-![Zrzut ekranu (36)](https://github.com/krystek77/mern-app-frontend/assets/45161412/c391a3f8-5a1c-49da-8e31-1fff6366f4aa)
 
-![Zrzut ekranu (41)](https://github.com/krystek77/mern-app-frontend/assets/45161412/9a0b7468-8b62-4809-8d1b-771cdf0e0819)
+![Zrzut ekranu (36)](https://github.com/krystek77/mern-app-frontend/assets/45161412/6b4316b0-294a-4132-a964-96f99945c396)
 
-![Zrzut ekranu (42)](https://github.com/krystek77/mern-app-frontend/assets/45161412/d55ce31c-08c9-41c3-98e8-a604741dbbd8)
+![Zrzut ekranu (41)](https://github.com/krystek77/mern-app-frontend/assets/45161412/a5ec932e-d4f2-4916-a572-45e1b9dceb48)
+
+![Zrzut ekranu (42)](https://github.com/krystek77/mern-app-frontend/assets/45161412/3eb33708-2538-461b-a44e-55ac9889b8d3)
 
 ### Responsive version
 #### Selected pages
-![Zrzut ekranu (37)](https://github.com/krystek77/mern-app-frontend/assets/45161412/9a3666a9-a90c-4e8d-b81c-cbb01c3a972c)
 
-![Zrzut ekranu (38)](https://github.com/krystek77/mern-app-frontend/assets/45161412/ebe883e5-b053-45f7-b37f-dce830441f43)
+![Zrzut ekranu (37)](https://github.com/krystek77/mern-app-frontend/assets/45161412/cdf7c49f-5313-40e4-8af3-79618b867069)
 
-![Zrzut ekranu (39)](https://github.com/krystek77/mern-app-frontend/assets/45161412/a56f6119-3291-4aec-a814-7b906faae4bf)
+![Zrzut ekranu (38)](https://github.com/krystek77/mern-app-frontend/assets/45161412/fa2b65aa-18e0-412c-b5d4-c9185ed1dc94)
+
+![Zrzut ekranu (39)](https://github.com/krystek77/mern-app-frontend/assets/45161412/6f1bc141-2106-493a-a510-57f21d17d3a7)
 
 ### Links
 Frontend [pralma.onrender.com](https://pralma.onrender.com/)
