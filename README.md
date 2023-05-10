@@ -21,6 +21,10 @@ Displaying recently viewed products and the most popular product categories on t
 ### Some other page
 ![Zrzut ekranu (36)](https://github.com/krystek77/mern-app-frontend/assets/45161412/c391a3f8-5a1c-49da-8e31-1fff6366f4aa)
 
+![Zrzut ekranu (41)](https://github.com/krystek77/mern-app-frontend/assets/45161412/9a0b7468-8b62-4809-8d1b-771cdf0e0819)
+
+![Zrzut ekranu (42)](https://github.com/krystek77/mern-app-frontend/assets/45161412/d55ce31c-08c9-41c3-98e8-a604741dbbd8)
+
 ### Responsive version
 #### Selected pages
 ![Zrzut ekranu (37)](https://github.com/krystek77/mern-app-frontend/assets/45161412/9a3666a9-a90c-4e8d-b81c-cbb01c3a972c)
@@ -28,3 +32,7 @@ Displaying recently viewed products and the most popular product categories on t
 ![Zrzut ekranu (38)](https://github.com/krystek77/mern-app-frontend/assets/45161412/ebe883e5-b053-45f7-b37f-dce830441f43)
 
 ![Zrzut ekranu (39)](https://github.com/krystek77/mern-app-frontend/assets/45161412/a56f6119-3291-4aec-a814-7b906faae4bf)
+
+### Links
+Frontend [pralma.onrender.com](https://pralma.onrender.com/)
+Backend [pralma-api.onrender.com](https://pralma-api.onrender.com/)
