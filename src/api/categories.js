@@ -16,6 +16,7 @@ export const getCategories = async (query) => {
     return result;
   } catch (error) {
     console.error(error.message);
+    return result;
   }
 };
 
